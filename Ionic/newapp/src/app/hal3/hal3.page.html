@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>hal3</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <strong> Favorite Note </strong>
+  <div *ngFor="let data of note;index as i">
+    <div *ngIf="data.fav=='1'">
+      <ion-item detail>
+        <ion-label>{{i}}.</ion-label>
+        <ion-label>{{note[i].judul}}</ion-label>
+        <ion-label>{{note[i].isi}}</ion-label>
+        <ion-label>Dibuat tanggal: {{note[i].date}}</ion-label>
+      </ion-item>
+    </div>
+  </div>
+</ion-content>
